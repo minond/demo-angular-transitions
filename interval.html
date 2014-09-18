@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Presentation Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="normalize.css">
+
+        <style type="text/css">
+        body {
+            cursor: default;
+            font: 16px monospace;
+            padding: 10px
+        }
+        </style>
+
+        <script src="modernizr.js"></script>
+        <script src="angular.min.js"></script>
+        <script src="d3.min.js"></script>
+        <script src="demo.js"></script>
+    </head>
+    <body ng-app="leaderboards">
+        <div class="names" ng-controller="LeaderboardController">
+            <div ng-repeat="leaderlist in leaderlists">{{leaderlist.name}}: active is {{leaderlist.active}}</div>
+        </div>
+    </body>
+</html>

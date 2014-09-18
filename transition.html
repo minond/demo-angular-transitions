@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Presentation Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="normalize.css">
+
+        <style type="text/css">
+        body {
+            cursor: default;
+            font: 16px monospace;
+            padding: 10px
+        }
+
+        .leaderlist div {
+            background-color: #DCF0F7;
+            border: 1px solid #0C2C52;
+            margin: 10px auto;
+            padding: 10px;
+            position: relative;
+            text-align: center;
+            width: 250px;
+        }
+        </style>
+
+        <script src="modernizr.js"></script>
+        <script src="angular.min.js"></script>
+        <script src="d3.min.js"></script>
+        <script src="demo.js"></script>
+    </head>
+    <body ng-app="leaderboards">
+        <div ng-controller="LeaderboardController">
+            <leaderlist
+                class="leaderlist"
+                ng-repeat="leaderlist in leaderlists"
+                leaderlist="leaderlist"
+            ></leaderlist>
+        </div>
+    </body>
+</html>
